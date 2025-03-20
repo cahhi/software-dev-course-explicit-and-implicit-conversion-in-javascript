@@ -22,11 +22,11 @@ Use console.log() to clearly show the before-and-after type conversions.
 let result = Number("5") - 2; //this looked correct to me and displayed how I expected. I added Number() to be more clear
 console.log("The result is: " + result);
 
-let isValid = Boolean("false" == false);//I added '==' so that the string 'false' will be equal to the boolean false.
+let isValid = Boolean("false");  //originally fixed at (let isValid = Boolean ("false"==false));)
 if (isValid) {
     console.log("This is valid!");
 } 
-
+//After reading more about Boolean(), this is a "truthy" and that as long as there is something in the value of the Boolean() other than edge case. 
 
 let age = "25";
 
