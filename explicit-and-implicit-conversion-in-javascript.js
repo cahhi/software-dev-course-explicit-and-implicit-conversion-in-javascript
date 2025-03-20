@@ -19,14 +19,37 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2; //this looked correct to me and displayed how I expected. I added Number() to be more clear
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+let isValid = Boolean("false" == false);//I added '==' so that the string 'false' will be equal to the boolean false.
 if (isValid) {
     console.log("This is valid!");
-}
+} 
+
 
 let age = "25";
-let totalAge = age + 5;
+
+let totalAge = Number(age) + 5; //turned the variable 'age' from string to number so the equation can work 
 console.log("Total Age: " + totalAge);
+
+
+//Part Two
+
+//Implicit type conversion
+let numofItems = 38;
+console.log(`You have ${numofItems} items in your cart.`); //Template literal
+
+//Explicit Type Conversion
+let str = "72";
+let num = Number(str); 
+
+console.log(num); // converting to a number from string
+
+//One edge case
+
+let slicesofPizza = Boolean(null); //used null to for Boolean value and 'if()' to create output if returned true. If false, code shows the expected output.
+  if (slicesofPizza) {
+    console.log("There is currently no pizza!");
+  }
+console.log(slicesofPizza);
